@@ -51,7 +51,7 @@ postItems.forEach(function(post)
 {
   if(_.lowerCase(req.params.topic)===_.lowerCase(post.title))
   {
-    console.log("Match found!");
+  res.render("post",{blogtitle:post.title,blogpost:post.body});
   }
 })
 })
